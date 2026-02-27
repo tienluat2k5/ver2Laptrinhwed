@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace FashionEcommerce.Api.Models
 {
     public class Category
@@ -7,7 +9,7 @@ namespace FashionEcommerce.Api.Models
         public string? Name { get; set; }
 
         public int? ParentId { get; set; }
-
+        [JsonIgnore]
         public Category? Parent { get; set; }
     }
 }
