@@ -17,18 +17,21 @@ namespace FashionEcommerce.Api.Controllers
         }
 
         // GET: api/product
-        [HttpGet]
-        public async Task<IActionResult> GetProducts()
+       [HttpGet]
+        public IActionResult GetAll()
         {
-            var products = await _context.Products.ToListAsync();
+            var products = _context.Products
+                .Include(p => p.Category)
+                .ToList();
+
             return Ok(products);
         }
 
         // GET: api/product/1
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetProduct(int id)
+        public IActionResult GetById(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = _context.Products.Find(id);
 
             if (product == null)
                 return NotFound();
@@ -37,26 +40,37 @@ namespace FashionEcommerce.Api.Controllers
         }
 
         // POST: api/product
-        [HttpPost]
-        public async Task<IActionResult> CreateProduct(Product product)
+         [HttpPost]
+        public IActionResult Create(Product product)
         {
             _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
+            return Ok(product);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, Product product)
+        {
+            if (id != product.Id)
+                return BadRequest();
+
+            _context.Products.Update(product);
+            _context.SaveChanges();
 
             return Ok(product);
         }
 
         // DELETE: api/product/1
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProduct(int id)
+        public IActionResult Delete(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = _context.Products.Find(id);
 
             if (product == null)
                 return NotFound();
 
             _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
             return Ok();
         }
