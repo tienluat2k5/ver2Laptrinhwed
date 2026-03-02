@@ -155,3 +155,11 @@ D:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\refint\FashionEcommerce
 D:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.pdb
 D:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.genruntimeconfig.cache
 D:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\ref\FashionEcommerce.Api.dll
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.csproj.AssemblyReference.cache
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.GeneratedMSBuildEditorConfig.editorconfig
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.AssemblyInfoInputs.cache
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.AssemblyInfo.cs
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.csproj.CoreCompileInputs.cache
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.MvcApplicationPartsAssemblyInfo.cs
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.MvcApplicationPartsAssemblyInfo.cache
+P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.sourcelink.json

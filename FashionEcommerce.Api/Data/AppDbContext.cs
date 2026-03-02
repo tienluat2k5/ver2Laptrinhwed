@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using FashionEcommerce.Api.Models;
-using FashionEcommerce.Models;
 
 namespace FashionEcommerce.Api.Data
 {

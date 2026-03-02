@@ -1,8 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FashionEcommerce.Models
+namespace FashionEcommerce.Api.Models
 {
     public class User
     {
@@ -11,7 +10,7 @@ namespace FashionEcommerce.Models
 
         public string? Username { get; set; }
 
-        public string? PasswordHash { get; set; }
+        public string PasswordHash { get; set; } = string.Empty;
 
         [Required]
         public string Email { get; set; } = string.Empty;
@@ -27,10 +26,13 @@ namespace FashionEcommerce.Models
 
         public string? AvatarUrl { get; set; }
 
-        public string? Role { get; set; }
+        // QUAN TRỌNG
+        [Required]
+        public string Role { get; set; } = "Customer";
 
-        public bool? IsLocked { get; set; }
+        // Không cho nullable
+        public bool IsLocked { get; set; } = false;
 
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }
