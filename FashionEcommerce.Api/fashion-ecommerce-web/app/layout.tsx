@@ -1,10 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
-
-export const metadata = {
-  title: "Fashion Store",
-  description: "Modern Ecommerce Website",
-};
+import { AuthProvider } from "./context/AuthContext";
 
 export default function RootLayout({
   children,
@@ -14,8 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gray-50">
-        <Navbar />
-        <div className="pt-20">{children}</div>
+        <AuthProvider>
+          <Navbar />
+          <div className="pt-20">{children}</div>
+        </AuthProvider>
       </body>
     </html>
   );

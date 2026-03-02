@@ -20,13 +20,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
         <!-- Remove the direct Microsoft.OpenApi package reference; it can conflict with
           Swashbuckle.AspNetCore's own dependency and has been causing the compiler
           to be unable to resolve the Models namespace under .NET 9.  The swagger
           generation types (OpenApiSecurityScheme, etc.) are provided transitively
           by Swashbuckle.AspNetCore, so only that package is needed here. -->
         <!-- <PackageReference Include="Microsoft.OpenApi" Version="3.3.1" /> -->
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" />
   </ItemGroup>
 
 </Project>

@@ -1,26 +1,34 @@
 "use client";
 
 import Link from "next/link";
+import { useAuth } from "../context/AuthContext";
 
 export default function Navbar() {
-  return (
-    <nav className="w-full bg-white shadow-md fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-        <Link href="/" className="text-2xl font-bold tracking-wide">
-          FASHION
-        </Link>
+  const { token, logout } = useAuth();
 
-        <div className="space-x-8 text-lg">
-          <Link href="/" className="hover:text-gray-500 transition">
-            Home
-          </Link>
-          <Link href="/products" className="hover:text-gray-500 transition">
-            Shop
-          </Link>
-          <Link href="/cart" className="hover:text-gray-500 transition">
-            Cart
-          </Link>
-        </div>
+  return (
+    <nav className="flex justify-between px-10 py-4 bg-white shadow">
+      <h1 className="font-bold text-xl">FASHION</h1>
+
+      <div className="flex gap-6 items-center">
+        <Link href="/">Home</Link>
+        <Link href="/products">Shop</Link>
+
+        {token && <Link href="/cart">Cart</Link>}
+
+        {!token ? (
+          <>
+            <Link href="/login">Login</Link>
+            <Link href="/register">Register</Link>
+          </>
+        ) : (
+          <button
+            onClick={logout}
+            className="bg-black text-white px-3 py-1 rounded"
+          >
+            Logout
+          </button>
+        )}
       </div>
     </nav>
   );
