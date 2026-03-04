@@ -6,6 +6,7 @@ namespace FashionEcommerce.Api.Models
     {
         public int Id { get; set; }
         public int ProductId { get; set; }
+        public Product? Product { get; set; }
         public string? SKU { get; set; }
         public int Quantity { get; set; }
        [Column(TypeName = "decimal(18,2)")]
