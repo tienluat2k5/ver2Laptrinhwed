@@ -163,3 +163,12 @@ P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.cs
 P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.MvcApplicationPartsAssemblyInfo.cs
 P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.MvcApplicationPartsAssemblyInfo.cache
 P:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.sourcelink.json
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.csproj.AssemblyReference.cache
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\rpswa.dswa.cache.json
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.GeneratedMSBuildEditorConfig.editorconfig
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.AssemblyInfoInputs.cache
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.AssemblyInfo.cs
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.csproj.CoreCompileInputs.cache
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.MvcApplicationPartsAssemblyInfo.cs
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.MvcApplicationPartsAssemblyInfo.cache
+F:\ver2Laptrinhwed\FashionEcommerce.Api\obj\Debug\net9.0\FashionEcommerce.Api.sourcelink.json

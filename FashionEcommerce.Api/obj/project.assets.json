@@ -4957,23 +4957,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chest\\.nuget\\packages\\": {},
+    "C:\\Users\\84335\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "P:\\ver2Laptrinhwed\\FashionEcommerce.Api\\FashionEcommerce.Api.csproj",
+      "projectUniqueName": "F:\\ver2Laptrinhwed\\FashionEcommerce.Api\\FashionEcommerce.Api.csproj",
       "projectName": "FashionEcommerce.Api",
-      "projectPath": "P:\\ver2Laptrinhwed\\FashionEcommerce.Api\\FashionEcommerce.Api.csproj",
-      "packagesPath": "C:\\Users\\Chest\\.nuget\\packages\\",
-      "outputPath": "P:\\ver2Laptrinhwed\\FashionEcommerce.Api\\obj\\",
+      "projectPath": "F:\\ver2Laptrinhwed\\FashionEcommerce.Api\\FashionEcommerce.Api.csproj",
+      "packagesPath": "C:\\Users\\84335\\.nuget\\packages\\",
+      "outputPath": "F:\\ver2Laptrinhwed\\FashionEcommerce.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Chest\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\84335\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5000,7 +5000,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -5062,7 +5062,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
