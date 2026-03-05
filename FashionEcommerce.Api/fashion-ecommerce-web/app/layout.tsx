@@ -1,9 +1,8 @@
-import "./globals.css";
-import Navbar from "./components/Navbar";
+import './globals.css';
 
 export const metadata = {
-  title: "Fashion Store",
-  description: "Modern Ecommerce Website",
+  title: 'Supersports - Mua Giày Thể Thao',
+  description: 'Trang web bán đồ thể thao xịn xò nhất',
 };
 
 export default function RootLayout({
@@ -12,11 +11,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-gray-50">
-        <Navbar />
-        <div className="pt-20">{children}</div>
-      </body>
+    <html lang="vi">
+      <body>{children}</body>
     </html>
   );
 }

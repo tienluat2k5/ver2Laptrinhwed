@@ -9,7 +9,6 @@
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,13 +19,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.OpenApi" Version="1.6.14" />
         <!-- Remove the direct Microsoft.OpenApi package reference; it can conflict with
           Swashbuckle.AspNetCore's own dependency and has been causing the compiler
           to be unable to resolve the Models namespace under .NET 9.  The swagger
           generation types (OpenApiSecurityScheme, etc.) are provided transitively
           by Swashbuckle.AspNetCore, so only that package is needed here. -->
         <!-- <PackageReference Include="Microsoft.OpenApi" Version="3.3.1" /> -->
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.4" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
 </Project>
