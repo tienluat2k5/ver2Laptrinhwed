@@ -28,7 +28,7 @@ namespace FashionEcommerce.Api.Models
 
         // QUAN TRỌNG
         [Required]
-        public string Role { get; set; } = "Customer";
+        public string Role { get; set; } = "User";
 
         // Không cho nullable
         public bool IsLocked { get; set; } = false;

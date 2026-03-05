@@ -6,10 +6,12 @@ namespace FashionEcommerce.Api.Models
 
         public string? Name { get; set; }
 
+        public string? Slug { get; set; }
+
         public decimal Price { get; set; }
 
         public int CategoryId { get; set; }
 
-        public Category? Category { get; set; }
+        public List<ProductVariant>? Variants { get; set; }
     }
 }
