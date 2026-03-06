@@ -27,7 +27,7 @@ namespace FashionEcommerce.Api.Controllers
             if (!string.IsNullOrWhiteSpace(search))
             {
                 // Lưu ý: Sửa chữ 'ProductName' thành đúng cái tên cột trong model Products của mày nhé
-                query = query.Where(p => p.ProductName.Contains(search));
+                query = query.Where(p => p.Name.Contains(search));
             }
 
             var products = await query.Take(20).ToListAsync();
