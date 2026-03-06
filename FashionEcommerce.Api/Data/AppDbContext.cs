@@ -28,7 +28,8 @@ namespace FashionEcommerce.Api.Data
         public DbSet<OrderStatusHistory> OrderStatusHistories { get; set; }
  
         // Cart
-        public DbSet<CartItem> CartItems { get; set; }
+       public DbSet<CartItem> CartItems { get; set; }
+        
 
         // Reviews
         public DbSet<ProductReview> ProductReviews { get; set; }
