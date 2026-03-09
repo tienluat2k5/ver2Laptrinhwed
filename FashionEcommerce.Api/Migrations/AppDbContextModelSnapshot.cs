@@ -343,6 +343,42 @@ namespace FashionEcommerce.Api.Migrations
                     b.ToTable("ProductReviews");
                 });
 
+            modelBuilder.Entity("FashionEcommerce.Api.Models.ProductVariant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ColorId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("PriceModifier")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SKU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SizeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductVariants");
+                });
+
             modelBuilder.Entity("FashionEcommerce.Api.Models.Promotion", b =>
                 {
                     b.Property<int>("Id")
@@ -459,42 +495,9 @@ namespace FashionEcommerce.Api.Migrations
                     b.ToTable("UserAddresseses");
                 });
 
-            modelBuilder.Entity("ProductVariant", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ColorId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("PriceModifier")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SizeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Sku")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductVariants");
-                });
-
             modelBuilder.Entity("FashionEcommerce.Api.Models.CartItem", b =>
                 {
-                    b.HasOne("ProductVariant", "ProductVariant")
+                    b.HasOne("FashionEcommerce.Api.Models.ProductVariant", "ProductVariant")
                         .WithMany()
                         .HasForeignKey("ProductVariantId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -520,7 +523,7 @@ namespace FashionEcommerce.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProductVariant", "ProductVariant")
+                    b.HasOne("FashionEcommerce.Api.Models.ProductVariant", "ProductVariant")
                         .WithMany()
                         .HasForeignKey("ProductVariantId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -529,7 +532,7 @@ namespace FashionEcommerce.Api.Migrations
                     b.Navigation("ProductVariant");
                 });
 
-            modelBuilder.Entity("ProductVariant", b =>
+            modelBuilder.Entity("FashionEcommerce.Api.Models.ProductVariant", b =>
                 {
                     b.HasOne("FashionEcommerce.Api.Models.Product", "Product")
                         .WithMany("Variants")

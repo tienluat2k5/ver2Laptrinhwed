@@ -22,5 +22,7 @@ namespace FashionEcommerce.Api.Models
         public decimal PriceModifier { get; set; }
 
         public decimal Price { get; set; }
+
+        public string? Name { get; set; }
     }
 }

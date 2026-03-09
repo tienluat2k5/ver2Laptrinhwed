@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace FashionEcommerce.Api.Models
 {
     public class CartItem
@@ -10,6 +12,7 @@ namespace FashionEcommerce.Api.Models
 
         public int Quantity { get; set; }
 
-        public ProductVariant ProductVariant { get; set; }
+        [JsonIgnore]
+        public ProductVariant? ProductVariant { get; set; }
     }
 }

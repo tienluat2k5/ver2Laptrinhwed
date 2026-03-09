@@ -1,4 +1,5 @@
 using FashionEcommerce.Api.Data;
+using FashionEcommerce.Api.DTOs;
 using FashionEcommerce.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -30,18 +31,25 @@ namespace FashionEcommerce.Api.Controllers
 
         // 2. Thêm vào giỏ
         [HttpPost("add")]
-        public IActionResult AddToCart([FromBody] CartItem item)
+        public IActionResult AddToCart([FromBody] CartItemAddDto dto)
         {
             var existing = _context.CartItems
-                .FirstOrDefault(c => c.UserId == item.UserId && c.ProductVariantId == item.ProductVariantId);
+                .FirstOrDefault(c => c.UserId == dto.UserId && c.ProductVariantId == dto.ProductVariantId);
 
             if (existing != null)
             {
-                existing.Quantity += item.Quantity;
+                existing.Quantity += dto.Quantity;
             }
             else
             {
-                _context.CartItems.Add(item);
+                // Create new CartItem without ProductVariant to avoid issues
+                var newItem = new CartItem
+                {
+                    UserId = dto.UserId,
+                    ProductVariantId = dto.ProductVariantId,
+                    Quantity = dto.Quantity
+                };
+                _context.CartItems.Add(newItem);
             }
 
             _context.SaveChanges();
